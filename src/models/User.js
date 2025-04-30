@@ -38,6 +38,7 @@ export default (sequelize) => {
 		{
 			tableName: 'users',
 			timestamps: true,
+      modelName: `UserModel`,
 			createdAt: 'created_at',
 			updatedAt: 'updated_at',
 		}

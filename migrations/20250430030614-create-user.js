@@ -29,9 +29,9 @@ export default {
 			country_code: {
 				type: Sequelize.STRING(4),
 			},
-			is_paid: {
+			is_subscribred: {
 				type: Sequelize.BOOLEAN,
-				defaultValue: false,
+				defaultValue: true,
 			},
 			created_at: {
 				type: Sequelize.DATE,

@@ -1,11 +1,11 @@
 import app from './src/app.js';
-import sequelize from './src/config/database.js';
+import db from './src/models/index.js'
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 5000;
 
-sequelize
-	.sync()
+db.sequelize
+	.authenticate()
 	.then(() => {
 		console.log('Database connected');
 		app.listen(PORT, () => {
