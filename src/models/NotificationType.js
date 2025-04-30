@@ -11,13 +11,18 @@ export default (sequelize) => {
 				autoIncrement: true,
 				allowNull: false,
 			},
-			name: {
-				type: DataTypes.STRING(100),
-				allowNull: false,
+			title: {
+				type: DataTypes.STRING,
+			},
+			tag: {
+				type: DataTypes.STRING(20),
 			},
 			via_email: {
 				type: DataTypes.BOOLEAN,
 				defaultValue: true,
+			},
+			email_subject: {
+				type: DataTypes.STRING,
 			},
 			email_template: {
 				type: DataTypes.TEXT,

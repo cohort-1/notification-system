@@ -10,12 +10,19 @@ export default {
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
-			name: {
+			title: {
 				type: Sequelize.STRING,
+			},
+			tag: {
+				type: Sequelize.STRING(20),
+				unique: true,
 			},
 			via_email: {
 				type: Sequelize.BOOLEAN,
 				defaultValue: true,
+			},
+			email_subject: {
+				type: Sequelize.STRING,
 			},
 			email_template: {
 				type: Sequelize.TEXT,
