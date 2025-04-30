@@ -38,10 +38,20 @@ export default (sequelize) => {
 		{
 			tableName: 'users',
 			timestamps: true,
-      modelName: `UserModel`,
+			modelName: `UserModel`,
 			createdAt: 'created_at',
 			updatedAt: 'updated_at',
 		}
 	);
+
+	User.associate = function (models) {
+		User.hasMany(models.Notification, { foreignKey: 'user_id' });
+		User.belongsToMany(models.NotificationType, {
+			through: models.UserNotificationPreference,
+			foreignKey: 'user_id',
+			otherKey: 'notification_type_id',
+		});
+	};
+
 	return User;
 };

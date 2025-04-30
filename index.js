@@ -1,5 +1,5 @@
 import app from './src/app.js';
-import db from './src/models/index.js'
+import db from './src/models/index.js';
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 5000;
